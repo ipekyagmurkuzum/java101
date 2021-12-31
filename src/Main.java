@@ -66,12 +66,12 @@ public class Main {
 
         double kisaKenar,uzunKenar,hipotenus;
 
-        Scanner kisa_input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Kısa kenar uzunluğunu giriniz: ");
-        kisaKenar = kisa_input.nextDouble();
-        Scanner uzun_input = new Scanner(System.in);
+        kisaKenar = input.nextDouble();
+
         System.out.print("Uzun kenar uzunluğunu giriniz: ");
-        uzunKenar = uzun_input.nextDouble();
+        uzunKenar = input.nextDouble();
 
         hipotenus = Math.sqrt(Math.pow(kisaKenar,2) + Math.pow(uzunKenar,2));
         System.out.println("Hipotenüs değeri: " + hipotenus);
@@ -83,17 +83,15 @@ public class Main {
 
         /*
 
-        Scanner a_input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Birinci kenar uzunluğu: ");
-        double birinci = a_input.nextDouble();
+        double birinci = input.nextDouble();
 
-        Scanner b_input = new Scanner(System.in);
         System.out.print("İkinci kenar uzunluğu: ");
-        double ikinci = b_input.nextDouble();
+        double ikinci = input.nextDouble();
 
-        Scanner c_input = new Scanner(System.in);
         System.out.print("Üçüncü kenar uzunluğu: ");
-        double ucuncu = c_input.nextDouble();
+        double ucuncu = input.nextDouble();
 
         //System.out.println(birinci + "," + ikinci + "," + ucuncu);
 
@@ -158,12 +156,11 @@ public class Main {
 
         double kilo,boy,vki;
 
-        Scanner kilo_input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Lütfon kilonuzu giriniz: ");
-        kilo = kilo_input.nextDouble();
-        Scanner boy_input = new Scanner(System.in);
+        kilo = input.nextDouble();
         System.out.print("Lütfon boyunuzu (metre cinsinde) giriniz: ");
-        boy = boy_input.nextDouble();
+        boy = input.nextDouble();
         vki = kilo / (Math.pow(boy,2));
         System.out.println(" Kilonuz: "+ kilo + "Boyunuz: " + boy + "\nVücut kitle Indeksiniz: " + vki );
 
@@ -172,35 +169,104 @@ public class Main {
 
         //MANAV KASA PROGRAMI----------------------------------------------
 
+        /*
 
         double armutKilo, elmaKilo, domatesKilo, muzKilo, patlicanKilo,
                 armutFiyat = 2.14, elmaFiyat = 3.67, domatesFiyat = 1.11, muzFiyat = 0.95, patlicanFiyat = 5.0;
 
-        Scanner armut = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Armut kaç kilo? : ");
-        armutKilo = armut.nextDouble();
+        armutKilo = input.nextDouble();
 
-        Scanner elma = new Scanner(System.in);
         System.out.print("Elma kaç kilo? : ");
-        elmaKilo = elma.nextDouble();
+        elmaKilo = input.nextDouble();
 
-        Scanner domates = new Scanner(System.in);
         System.out.print("Domates kaç kilo? : ");
-        domatesKilo = domates.nextDouble();
+        domatesKilo = input.nextDouble();
 
-        Scanner muz = new Scanner(System.in);
         System.out.print("Muz kaç kilo? : ");
-        muzKilo = muz.nextDouble();
+        muzKilo = input.nextDouble();
 
-        Scanner patlican = new Scanner(System.in);
         System.out.print("Patlıcan kaç kilo? : ");
-        patlicanKilo = patlican.nextDouble();
+        patlicanKilo = input.nextDouble();
 
         double sepet = armutFiyat*armutKilo + elmaFiyat*elmaKilo + domatesFiyat*domatesKilo + muzFiyat*muzKilo + patlicanFiyat*patlicanKilo;
 
         System.out.println("Toplam sepet tutarı: " + sepet + " TL'dir.");
 
+        */
 
 
+        //HAFTANIN GÜNLERİ----------------------------------------------
+
+        /*
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir sayı giriniz: ");
+        int day = input.nextInt();
+
+        switch (day) {
+            case 1:
+                System.out.println("Bugün günlerden pazartesi");
+                break;
+            case 2:
+                System.out.println("Bugün günlerden salı");
+                break;
+            case 3:
+                System.out.println("Bugün günlerden çarşamba");
+                break;
+            case 4:
+                System.out.println("Bugün günlerden perşembe");
+                break;
+            case 5:
+                System.out.println("Bugün günlerden cuma");
+                break;
+            case 6:
+                System.out.println("Bugün günlerden cumartesi");
+                break;
+            case 7:
+                System.out.println("Bugün günlerden pazar");
+                break;
+            default:
+                System.out.println("Lütfen 1'den 7'ye kadar bir sayı giriniz.");
+
+         */
+
+        //BASİT HESAP MAKİNESİ----------------------------------------------
+
+        double n1, n2;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Birinci sayıyı girin: ");
+        n1 = input.nextDouble();
+
+        System.out.print("İkinci sayıyı girin: ");
+        n2 = input.nextDouble();
+
+        System.out.print("1-Toplama\n2-Çıkarma\n3-Çarpma\n4-Bölme\nLütfen işlem seçiniz: ");
+
+        int secilenIslem = input.nextInt();
+
+        switch (secilenIslem) {
+            case 1:
+                System.out.print(n1 + n2);
+                break;
+            case 2:
+                System.out.print(n1 - n2);
+                break;
+            case 3:
+                System.out.print(n1 * n2);
+                break;
+            case 4:
+                if (n2 != 0) {
+                    System.out.print(n1 / n2);
+                } else {
+                    System.out.print("Bir sayı 0'a bölünemez.");
+                }
+                break;
+            default:
+                System.out.print("Hatalı bir sayı girdiniz. Lütfen tekrar deneyin.");
+        }
     }
 }
+
