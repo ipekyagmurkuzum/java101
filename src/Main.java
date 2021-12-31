@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,7 +38,7 @@ public class Main {
         */
 
         //KDV HESAPLAMA-----------------------------------------------
-
+        /*
         double tutar;
         Scanner input = new Scanner(System.in);
 
@@ -51,11 +52,47 @@ public class Main {
 
         kdvliTutar = tutar+tutar*kdv;
         System.out.println("KDV'li tutar: " + kdvliTutar);
+        */
 
 
+        //HİPOTENÜS BULMA----------------------------------------------
 
-        //-----------------------------------------------
+        /*
+        double kisaKenar,uzunKenar,hipotenus;
 
+        Scanner kisa_input = new Scanner(System.in);
+        System.out.print("Kısa kenar uzunluğunu giriniz: ");
+        kisaKenar = kisa_input.nextDouble();
+        Scanner uzun_input = new Scanner(System.in);
+        System.out.print("Uzun kenar uzunluğunu giriniz: ");
+        uzunKenar = uzun_input.nextDouble();
+
+        hipotenus = Math.sqrt(Math.pow(kisaKenar,2) + Math.pow(uzunKenar,2));
+        System.out.println("Hipotenüs değeri: " + hipotenus);
+        */
+
+        //ALAN BULMA----------------------------------------------
+
+
+        Scanner a_input = new Scanner(System.in);
+        System.out.print("Birinci kenar uzunluğu: ");
+        double birinci = a_input.nextDouble();
+
+        Scanner b_input = new Scanner(System.in);
+        System.out.print("İkinci kenar uzunluğu: ");
+        double ikinci = b_input.nextDouble();
+
+        Scanner c_input = new Scanner(System.in);
+        System.out.print("Üçüncü kenar uzunluğu: ");
+        double ucuncu = c_input.nextDouble();
+
+        //System.out.println(birinci + "," + ikinci + "," + ucuncu);
+
+        double cevre = birinci+ikinci+ucuncu;
+        double u = cevre/2;
+        double alan = Math.sqrt(u*(u-birinci)*(u-ikinci)*(u-ucuncu));
+
+        System.out.print("Cevre: "+ cevre + " Alan: " + alan);
 
     }
 }
