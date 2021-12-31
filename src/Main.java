@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        // NOT ORTALAMASI-----------------------------------------------
+
+        /*
         int mat, turkce, fizik, kimya, biyo, muzik;
 
         Scanner input = new Scanner(System.in);
@@ -30,5 +33,29 @@ public class Main {
         System.out.println("Ortalamanız: " + sonuc);
 
         System.out.println(sonuc > 60 ? "Sınıfı geçti" : "Sınıfta kaldı");
+
+        */
+
+        //KDV HESAPLAMA-----------------------------------------------
+
+        double tutar;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Lütfen KDV hesaplamak istediğiniz tutarı girin: ");
+        tutar = input.nextDouble();
+        double kdvliTutar;
+
+        // Tutar 1000'in üzerindeyse KDV oranı 0.08 değilse 0.18 alınacak
+        double kdv = tutar>=1000 ?  0.08 : 0.18;
+        System.out.println("KDV Oranı: " + kdv);
+
+        kdvliTutar = tutar+tutar*kdv;
+        System.out.println("KDV'li tutar: " + kdvliTutar);
+
+
+
+        //-----------------------------------------------
+
+
     }
 }
