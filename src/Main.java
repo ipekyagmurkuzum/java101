@@ -153,6 +153,9 @@ public class Main {
 
         //VÜCUT KİTLE ENDEKSİ HESAPLAMA----------------------------------------------
 
+
+        /*
+
         double kilo,boy,vki;
 
         Scanner kilo_input = new Scanner(System.in);
@@ -163,6 +166,41 @@ public class Main {
         boy = boy_input.nextDouble();
         vki = kilo / (Math.pow(boy,2));
         System.out.println(" Kilonuz: "+ kilo + "Boyunuz: " + boy + "\nVücut kitle Indeksiniz: " + vki );
+
+         */
+
+
+        //MANAV KASA PROGRAMI----------------------------------------------
+
+
+        double armutKilo, elmaKilo, domatesKilo, muzKilo, patlicanKilo,
+                armutFiyat = 2.14, elmaFiyat = 3.67, domatesFiyat = 1.11, muzFiyat = 0.95, patlicanFiyat = 5.0;
+
+        Scanner armut = new Scanner(System.in);
+        System.out.print("Armut kaç kilo? : ");
+        armutKilo = armut.nextDouble();
+
+        Scanner elma = new Scanner(System.in);
+        System.out.print("Elma kaç kilo? : ");
+        elmaKilo = elma.nextDouble();
+
+        Scanner domates = new Scanner(System.in);
+        System.out.print("Domates kaç kilo? : ");
+        domatesKilo = domates.nextDouble();
+
+        Scanner muz = new Scanner(System.in);
+        System.out.print("Muz kaç kilo? : ");
+        muzKilo = muz.nextDouble();
+
+        Scanner patlican = new Scanner(System.in);
+        System.out.print("Patlıcan kaç kilo? : ");
+        patlicanKilo = patlican.nextDouble();
+
+        double sepet = armutFiyat*armutKilo + elmaFiyat*elmaKilo + domatesFiyat*domatesKilo + muzFiyat*muzKilo + patlicanFiyat*patlicanKilo;
+
+        System.out.println("Toplam sepet tutarı: " + sepet + " TL'dir.");
+
+
 
     }
 }
