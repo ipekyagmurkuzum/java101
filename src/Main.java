@@ -127,6 +127,10 @@ public class Main {
 
         //DAİRE ÇEVRESİ VE ALANI HESAPLAMA----------------------------------------------
 
+
+        /*
+
+
         double yaricap,cevre,alan, pi = 3.14, alfa, dilim_alan;
 
         Scanner input = new Scanner(System.in);
@@ -138,11 +142,27 @@ public class Main {
         //System.out.print("Çevre: "+ cevre + " Alan: " + alan);
 
         Scanner a_input = new Scanner(System.in);
-        System.out.print("Açı değerini giriniz");
+        System.out.print("Açı değerini giriniz: ");
         alfa = a_input.nextDouble();
 
         dilim_alan = alan*alfa/360;
         System.out.println("Daire diliminin alanı: " + dilim_alan);
+
+         */
+
+
+        //VÜCUT KİTLE ENDEKSİ HESAPLAMA----------------------------------------------
+
+        double kilo,boy,vki;
+
+        Scanner kilo_input = new Scanner(System.in);
+        System.out.print("Lütfon kilonuzu giriniz: ");
+        kilo = kilo_input.nextDouble();
+        Scanner boy_input = new Scanner(System.in);
+        System.out.print("Lütfon boyunuzu (metre cinsinde) giriniz: ");
+        boy = boy_input.nextDouble();
+        vki = kilo / (Math.pow(boy,2));
+        System.out.println(" Kilonuz: "+ kilo + "Boyunuz: " + boy + "\nVücut kitle Indeksiniz: " + vki );
 
     }
 }
