@@ -38,7 +38,10 @@ public class Main {
         */
 
         //KDV HESAPLAMA-----------------------------------------------
+
+
         /*
+
         double tutar;
         Scanner input = new Scanner(System.in);
 
@@ -52,12 +55,15 @@ public class Main {
 
         kdvliTutar = tutar+tutar*kdv;
         System.out.println("KDV'li tutar: " + kdvliTutar);
+
         */
 
 
         //HİPOTENÜS BULMA----------------------------------------------
 
+
         /*
+
         double kisaKenar,uzunKenar,hipotenus;
 
         Scanner kisa_input = new Scanner(System.in);
@@ -69,10 +75,13 @@ public class Main {
 
         hipotenus = Math.sqrt(Math.pow(kisaKenar,2) + Math.pow(uzunKenar,2));
         System.out.println("Hipotenüs değeri: " + hipotenus);
+
         */
 
         //ALAN BULMA----------------------------------------------
 
+
+        /*
 
         Scanner a_input = new Scanner(System.in);
         System.out.print("Birinci kenar uzunluğu: ");
@@ -94,5 +103,23 @@ public class Main {
 
         System.out.print("Cevre: "+ cevre + " Alan: " + alan);
 
+        */
+
+        //TAKSİMETRE----------------------------------------------
+
+
+        double acilisUcreti = 10,toplam,km;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Km değeri giriniz: ");
+        km = input.nextDouble();
+
+        toplam = acilisUcreti + 2.20 * km;
+
+        if (toplam<20) {
+            toplam = 20;
+        }
+
+        System.out.println("Toplam ödenecek tutar: " + toplam + " TL'dir.");
     }
 }
