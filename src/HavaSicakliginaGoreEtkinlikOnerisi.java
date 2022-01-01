@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HavaSicakliginaGöreEtkinlikOnerisi {
+public class HavaSicakliginaGoreEtkinlikOnerisi {
     public static void main(String[] args) {
 
         int sicaklik;
