@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -379,6 +380,9 @@ public class Main {
 
         //HAVA SICAKLIĞINA GÖRE ETKİNLİK ÖNERME----------------------------------------------
 
+
+        /*
+
         int sicaklik;
         Scanner input = new Scanner(System.in);
         System.out.print("Lütfen bir sıcaklık değeri giriniz: ");
@@ -396,6 +400,23 @@ public class Main {
         } else if (sicaklik > 25) {
             System.out.print("Yüzmeye gidebilirsiniz.");
         }
+
+
+         */
+
+
+        //GİRİLEN 4 SAYIYI KÜÇÜKTEN BÜYÜĞE SIRALAMA----------------------------------------------
+        int i;
+        int [] arr = new int [4];
+
+        for (i=0;i<4;i++) {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Bir sayı giriniz: ");
+            arr[i] = input.nextInt();
+        }
+
+        Arrays.sort(arr);
+        System.out.print(Arrays.toString(arr));
     }
 }
 
