@@ -9,10 +9,10 @@ public class TekSayilariTopla {
         do {
             System.out.print("Sayı giriniz:");
             number = scan.nextInt();
-            if(number%2 == 1) {
+            if(number%4 == 0) {
                 total += number;
             }
-        } while (number > 0);
+        } while (number%2 == 0);
         System.out.println(total);
     }
 }
