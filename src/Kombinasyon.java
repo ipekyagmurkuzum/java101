@@ -10,21 +10,20 @@ public class Kombinasyon {
 //        Kombinasyon formülü
 //        C(n,r) = n! / (r! * (n-r)!)
 
+        int nfakt = 1,rfakt = 1, nrfakt = 1;
+
         Scanner scan = new Scanner(System.in);
         System.out.print("n değeri giriniz: ");
         int nDegeri = scan.nextInt();
         System.out.print("r değeri giriniz: ");
         int rDegeri = scan.nextInt();
 
-        int nfakt = 1;
         for (int i = 1; i <= nDegeri; i++) {
             nfakt *= i;
         }
-        int rfakt = 1;
         for (int i = 1; i <= rDegeri; i++) {
             rfakt *= i;
         }
-        int nrfakt = 1;
         for (int i = 1; i <= nDegeri - rDegeri; i++) {
             nrfakt *= i;
         }
