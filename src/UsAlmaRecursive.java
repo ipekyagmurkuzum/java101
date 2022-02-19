@@ -2,12 +2,15 @@ import java.util.Scanner;
 
 public class UsAlmaRecursive {
 
-    static int usAlma(int a, int b) {
-        if (b == 0) {
-            return 1;
-        } else {
+    static double usAlma(double a, double b) {
+        if (b > 0) {
             return usAlma(a, b - 1) * a;
+        } else if (b < 0) {
+            return usAlma(a, b + 1) / a;
+        } else if (b == 0) {
+            return 1;
         }
+        return usAlma(a, b);
     }
 
     public static void main(String[] args) {
