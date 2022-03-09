@@ -1,8 +1,4 @@
-import java.util.Arrays;
-import java.util.List;
-
 public class DiziFrekansBulma {
-
 
     static boolean isFind(int[] arr, int value) {
         for (int i = 0; i < arr.length; i++) {
