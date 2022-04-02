@@ -23,6 +23,6 @@ public class PalindromikKelime {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("abba"));
+        System.out.println(isPalindrome("ata"));
     }
 }
