@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Armstrong {
     public static void main(String[] args) {
-
         int uzunluk = 0, temp;
         int mod, toplam = 0;
         int us = 1;
@@ -34,6 +33,5 @@ public class Armstrong {
         } else {
             System.out.print("Armstrong değil");
         }
-
     }
 }
