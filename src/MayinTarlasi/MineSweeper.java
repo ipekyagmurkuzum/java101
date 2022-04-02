@@ -8,7 +8,7 @@ public class MineSweeper {
     int mineNumber, selectedRow, selectedCol;
     Scanner scan = new Scanner(System.in);
     Random random = new Random();
-    int occupiedSpots = 0, nearMines = 0;
+    int occupiedSpots = 0;
     boolean isGameOver = false;
 
     public MineSweeper(int rowNumber, int colNumber) {
@@ -32,23 +32,23 @@ public class MineSweeper {
             System.out.println();
         }
         while (!isGameOver) {
+            int nearMines=0;
             System.out.println("Satır sayısı giriniz: ");
             selectedRow = scan.nextInt() - 1;
             System.out.println("Sütun sayısı giriniz: ");
             selectedCol = scan.nextInt() - 1;
             System.out.println("======================");
-
-            if (selectedRow < 0 || selectedRow > rowNumber) {
-                System.out.println("Hatalı sayı girişi");
-            } else if (selectedCol < 0 || selectedCol > colNumber) {
-                System.out.println("Hatalı sayı girişi");
+            if (selectedRow < 0 || selectedRow >= rowNumber) {
+                System.out.println("Hatalı sayı girişi!");
+            } else if (selectedCol < 0 || selectedCol >= colNumber) {
+                System.out.println("Hatalı sayı girişi!");
             } else if (Objects.equals(matrix[selectedRow][selectedCol], "*")) {
                 isGameOver = true;
                 System.out.println("Game Over!");
             } else if (Objects.equals(matrix[selectedRow][selectedCol], "-")) {
                 for (int i = selectedRow - 1; i <= selectedRow + 1; i++) {
                     for (int j = selectedCol - 1; j <= selectedCol + 1; j++) {
-                        if ((i < rowNumber && i > 0) && (j < colNumber && j > 0)) {
+                        if ((i < rowNumber && i >= 0) && (j < colNumber && j >= 0)) {
                             if (Objects.equals(matrix[i][j], "*")) {
                                 nearMines++;
                             }
