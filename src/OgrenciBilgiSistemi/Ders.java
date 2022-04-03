@@ -1,4 +1,4 @@
-package ogrenciBilgiSistemi;
+package OgrenciBilgiSistemi;
 
 public class Ders {
     Ogretmen ogretmen;
