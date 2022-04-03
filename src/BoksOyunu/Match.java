@@ -56,7 +56,7 @@ public class Match {
     boolean whoGoesFirst() {
         double firstPerson = Math.random()*100;
         // %50 possibility to hit first
-        if(firstPerson<=50) {
+        if(firstPerson<50) {
             // if true, let f1 hit first
             return true;
         } else {
