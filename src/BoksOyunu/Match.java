@@ -17,25 +17,35 @@ public class Match {
         if (isChecked()) {
             while (this.f1.health > 0 && this.f2.health > 0) {
                 System.out.println("==========YENİ ROUND===========");
-
-                if(whoGoesFirst()) {
+                if (whoGoesFirst()) {
                     this.f2.health = this.f1.hit(f2);
                     if (isWon()) {
                         break;
                     }
                     System.out.println(this.f2.name + " sağlığı " + this.f2.health);
-                } if(!whoGoesFirst()) {
                     this.f1.health = this.f2.hit(f1);
                     if (isWon()) {
                         break;
                     }
                     System.out.println(this.f1.name + " sağlığı " + this.f1.health);
+                } else {
+                    this.f1.health = this.f2.hit(f1);
+                    if (isWon()) {
+                        break;
+                    }
+                    System.out.println(this.f1.name + " sağlığı " + this.f1.health);
+                    this.f2.health = this.f1.hit(f2);
+                    if (isWon()) {
+                        break;
+                    }
+                    System.out.println(this.f2.name + " sağlığı " + this.f2.health);
                 }
             }
         } else {
             System.out.println("Sporcuların sikleti uymuyor.");
         }
     }
+
 
     boolean isChecked() {
         return (this.f1.weight >= this.minWeight && this.f1.weight <= this.maxWeight) &&
@@ -54,9 +64,9 @@ public class Match {
     }
 
     boolean whoGoesFirst() {
-        double firstPerson = Math.random()*100;
+        double firstPerson = Math.random() * 100;
         // %50 possibility to hit first
-        if(firstPerson<50) {
+        if (firstPerson < 50) {
             // if true, let f1 hit first
             return true;
         } else {
