@@ -32,13 +32,13 @@ public class Employee {
     }
 
     double raiseSalary() {
-        int workingYear=2021-this.hireYear;
-        if(workingYear<10) {
-            salaryIncrease =salary*0.05;
-        } else if(workingYear>9 && workingYear<20) {
-            salaryIncrease =salary*0.1;
+        int workingYear = 2021 - this.hireYear;
+        if (workingYear < 10) {
+            salaryIncrease = salary * 0.05;
+        } else if (workingYear > 9 && workingYear < 20) {
+            salaryIncrease = salary * 0.1;
         } else {
-            salaryIncrease =salary*0.15;
+            salaryIncrease = salary * 0.15;
         }
         return salaryIncrease;
     }
@@ -51,8 +51,8 @@ public class Employee {
                 + "Vergi : " + tax() + "\n"
                 + "Bonus : " + bonus() + "\n"
                 + "Maaş Artışı : " + raiseSalary() + "\n"
-                + "Vergi ve Bonuslar ile birlikte maaş : " + (salary+bonus-tax) + "\n"
-                + "Toplam Maaş : " + (salary+salaryIncrease) +"\n"
+                + "Vergi ve Bonuslar ile birlikte maaş : " + (salary + bonus - tax) + "\n"
+                + "Toplam Maaş : " + (salary + salaryIncrease) + "\n"
         );
     }
 
